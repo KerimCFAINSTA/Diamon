@@ -1,0 +1,191 @@
+/* Variables pour le mode clair (par défaut) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text-primary: #000000;
+    --text-secondary: #6b7280;
+    --text-tertiary: #9ca3af;
+    --border-color: #e5e7eb;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --gold: #C5A059;
+}
+
+/* Variables pour le mode sombre */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #3d3d3d;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --border-color: #404040;
+    --shadow: rgba(255, 255, 255, 0.05);
+    --gold: #d4a959;
+}
+
+/* Application des variables */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Backgrounds */
+.bg-white {
+    background-color: var(--bg-primary) !important;
+}
+
+.bg-gray-50 {
+    background-color: var(--bg-secondary) !important;
+}
+
+.bg-gray-100 {
+    background-color: var(--bg-tertiary) !important;
+}
+
+/* Texte */
+.text-gray-600 {
+    color: var(--text-secondary) !important;
+}
+
+.text-gray-500 {
+    color: var(--text-tertiary) !important;
+}
+
+.text-black {
+    color: var(--text-primary) !important;
+}
+
+/* Bordures */
+.border-gray-200,
+.border-gray-300 {
+    border-color: var(--border-color) !important;
+}
+
+/* Ombres */
+.shadow,
+.shadow-sm,
+.shadow-md,
+.shadow-lg {
+    box-shadow: 0 4px 6px -1px var(--shadow), 0 2px 4px -1px var(--shadow) !important;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="search"],
+textarea,
+select {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: var(--bg-primary);
+}
+
+/* Cards */
+.rounded-lg,
+.rounded {
+    background-color: var(--bg-primary);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--bg-primary);
+    border-bottom-color: var(--border-color);
+}
+
+/* Toggle Animation */
+.dark-mode-transition {
+    transition: all 0.3s ease;
+}
+
+/* Images - légère opacité en dark mode */
+[data-theme="dark"] img {
+    opacity: 0.9;
+}
+
+[data-theme="dark"] img:hover {
+    opacity: 1;
+}
+
+/* Boutons spéciaux dark mode */
+[data-theme="dark"] .bg-black {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+[data-theme="dark"] .text-white {
+    color: #000000;
+}
+
+[data-theme="dark"] .hover\:bg-gold:hover {
+    background-color: var(--gold);
+    color: #000000;
+}
+
+/* Gold color */
+.text-gold {
+    color: var(--gold) !important;
+}
+
+.bg-gold {
+    background-color: var(--gold) !important;
+}
+
+.border-gold {
+    border-color: var(--gold) !important;
+}
+
+/* Exceptions pour certains éléments qui doivent rester noirs */
+[data-theme="dark"] .keep-black {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Footer */
+[data-theme="dark"] footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Badges */
+[data-theme="dark"] .bg-green-100 {
+    background-color: #065f46;
+}
+
+[data-theme="dark"] .text-green-700 {
+    color: #d1fae5;
+}
+
+[data-theme="dark"] .bg-red-100 {
+    background-color: #7f1d1d;
+}
+
+[data-theme="dark"] .text-red-700 {
+    color: #fecaca;
+}
+
+[data-theme="dark"] .bg-blue-100 {
+    background-color: #1e3a8a;
+}
+
+[data-theme="dark"] .text-blue-700 {
+    color: #bfdbfe;
+}
+
+[data-theme="dark"] .bg-yellow-100 {
+    background-color: #78350f;
+}
+
+[data-theme="dark"] .text-yellow-700 {
+    color: #fde68a;
+}
